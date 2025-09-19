@@ -1,0 +1,45 @@
+/* Diseño mínimo con acento azul */
+:root{ --accent:#38bdf8; }
+
+*{ box-sizing:border-box; }
+body{ margin:0; font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.4; color:#111; background:#fff; }
+header, main, footer{ max-width: 920px; margin: 0 auto; padding: 12px 16px; }
+
+header h1{ margin: 8px 0 0; font-size: 1.6rem; }
+.sub{ margin: 4px 0 12px; color:#3d3d3d; }
+.nota{ margin: 8px 0 12px; }
+
+.btn{
+  border:1px solid var(--accent);
+  background: var(--accent);
+  color:#003047;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn:hover{ filter: brightness(1.05); }
+
+h2{ margin:16px 0 8px; font-size:1.2rem; }
+
+/* Tabla simple */
+table{ width:100%; border-collapse: collapse; margin-top: 10px; }
+th, td{ border:1px solid #ddd; padding:8px; text-align:left; vertical-align:top; }
+thead th{ background:#f5f7fb; }
+tbody tr:nth-child(odd){ background:#fafafa; }
+th#price{ cursor:pointer; }
+
+img{ width:80px; height:80px; object-fit:contain; display:block; }
+
+/* Filtros por categoría con CSS (la tabla debe ser ~ sibling de los inputs) */
+#c1:not(:checked) ~ table tbody tr.c1{ display:none; }
+#c2:not(:checked) ~ table tbody tr.c2{ display:none; }
+#c3:not(:checked) ~ table tbody tr.c3{ display:none; }
+#c4:not(:checked) ~ table tbody tr.c4{ display:none; }
+
+main { padding: 20px 24px; }
+
+table {
+  width: min(100%, 860px);
+  margin-inline: auto; 
+}
